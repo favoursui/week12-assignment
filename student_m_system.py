@@ -72,7 +72,7 @@ def student_update():
 		elif option == 3:
 			dep_update = input("enter new department: ")
 			student_db[id_update]["department"] = dep_update
-			print(student_db)	
+			print(student_db)
 	else:
 		print(f"student with ID {id_update} not found")
 
@@ -115,7 +115,9 @@ def age_filter():
 		if student_db[student]["age"] >= age and count < len(student_db):
 			count += 1
 			print(student_db[student])
-
+		
+	else:
+		print(f"student with age {age} does not exist")
 
 start()
 
