@@ -30,6 +30,10 @@ def start():
 		elif user_choice == 8:
 			age_filter()	
 
+		elif user_choice == 0:
+			terminate()
+			break	
+
 		else:
 			print("input out of range")
 
@@ -71,7 +75,7 @@ def student_update():
 
 		elif option == 3:
 			dep_update = input("enter new department: ")
-			student_db[id_update]["department"] = dep_update
+			student_db[id_update]["dept"] = dep_update
 			print(student_db)
 	else:
 		print(f"student with ID {id_update} not found")
@@ -118,6 +122,9 @@ def age_filter():
 		
 	else:
 		print(f"student with age {age} does not exist")
+
+def terminate():
+	print("termination success")
 
 start()
 
