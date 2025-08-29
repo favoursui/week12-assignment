@@ -24,7 +24,8 @@ def start():
 			expensive_product()
 		elif command == 6:
 			potential_sale()
-
+		else:
+			print("input out of range")
 
 def add_product():
 	item  = input("enter item name to add: ").lower()
